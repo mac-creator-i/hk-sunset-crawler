@@ -45,7 +45,7 @@ def send_email(data):
     
     # Connect to Google's SMTP Server
     try:
-        server = smtplib.SMTP('smtp.gmail.com', 505) # Or 587 depending on system settings
+        server = smtplib.SMTP('smtp.gmail.com', 587) # Or 587 depending on system settings
         server.starttls()
         server.login(sender_email, sender_password)
         server.sendmail(sender_email, receiver_email, msg.as_string())
